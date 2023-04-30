@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    --ff-primary: 'Poppins', sans-serif;
+    --text-color: #303030;
+    --bg-primary: #e5e2e2ae;
+
+    --hue: 194;
+    --primary-color: hsl(var(--hue), 100%, 63%);
+}
+
+body {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    font-family: var(--ff-primary);
+    background: var(--bg-primary);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    white-space: nowrap; /* tira a quebra de linha */
+    border-width: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+}
+
+.app {
+    max-width: 500px;
+    padding: 2rem;
+    margin: 0 auto; /* deixa alinhado ao centro */
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2.5rem 0;
+}
+
+header h1 {
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+}
+
+.search input {
+    height: 3.2rem;
+    border: 1px solid #ccc;
+    border-radius: .4rem 0 0 .4rem;
+    padding: 0 .8rem;
+}
+
+.search button {
+    height: 3.2rem;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 0 .4rem .4rem 0;
+    padding: 0 1rem;
+    cursor: pointer;
+}
+
+.search button:hover {
+    filter: brightness(1.1)
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* tira as bordas da tabela */
+    box-shadow: 2rem 2rem 1.5rem -1rem rgba(0, 0, 0, 0.3);
+}
+
+table * {
+    font-size: 1.4rem;
+    color: var(--text-color);
+
+}
+
+table th {
+    background: var(--primary-color);
+    text-align: left; /* alinha o texto a esquerda*/
+    font-weight: normal;
+    padding: 1.5rem;
+}
+
+table th:first-child {
+    border-top-left-radius: .4rem;
+}
+
+table th:last-child {
+    border-top-right-radius: .4rem;
+}
+
+table tr:nth-child(even) {
+    /* peguei todas linhas pares da tabela,
+    e mudei o background delas */
+    background: #eee;
+}
+
+table tr:nth-child(odd) {
+    /* peguei todas linhas ímpares da tabela,
+    e mudei o background delas */
+    background: #ddd;
+}
+
+table td {
+    padding: 1.5rem;
+    text-align: left;
+}
+
+td.user {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    white-space: nowrap;
+}
+
+td.user img {
+    height: 5rem;
+    width: 5rem;
+
+    object-fit: cover; /* garante que a img cubra todo espaço */
+    border-radius: 50%;
+}
+
+td.user a {
+    text-decoration: none;
+}
+
+td.user a p {
+    font-weight: bold;
+}
+
+td .remove {
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: red;
+}
